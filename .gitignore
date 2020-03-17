@@ -23,6 +23,7 @@
 firebase.json
 
 /src/assets/video.mp4
+/src/assets/image.jpg
 
 npm-debug.log*
 yarn-debug.log*

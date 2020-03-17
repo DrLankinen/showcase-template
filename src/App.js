@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { Container, Col, Row } from 'react-bootstrap';
 import ReactGA from 'react-ga';
-import { txts } from './utils/Config';
+import { txts, showVideoBackground } from './utils/Config';
 import Onboarding from './components/Onboarding';
 
 const video = require('./assets/video.mp4');
+const image = require('./assets/image.jpg');
 
 function App() {
   useEffect(() => {
@@ -15,14 +16,19 @@ function App() {
   return (
     <Container fluid>
       <Row>
-        <video
-          style={styles.video}
-          autoPlay
-          loop
-          muted
-          preload="auto"
-          src={video}
-        />
+        {showVideoBackground ? (
+          <video
+            style={styles.video}
+            autoPlay
+            loop
+            muted
+            preload="auto"
+            src={video}
+          />
+        ) : (
+          <img alt="background" style={styles.video} src={image} />
+        )}
+
         <p style={styles.title}>
           <span style={{ color: 'white' }}>{txts.title}</span>
         </p>
@@ -75,6 +81,7 @@ const styles = {
     objectFit: 'cover',
     filter: 'brightness(80%)',
     width: '100%',
+    maxHeight: 800,
   },
   title: {
     textAlign: 'center',

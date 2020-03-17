@@ -1,6 +1,7 @@
 const questionTypes = ['SELECT', 'TEXT'];
 
 module.exports = {
+  // Changes text different places of the website
   txts: {
     title: 'Hello World!',
     joinButton: 'Download',
@@ -18,8 +19,17 @@ module.exports = {
     secondSectionContent: 'Hear. This is what text sounds like here.',
     thirdSectionContent: 'Talk. This is what text talks like here.',
   },
+  // Show video or image on the top.
+  // Video requires video.mp4 file in asset folder
+  // Image requires image.jpg file in asset folder
+  showVideoBackground: true,
+  // Use the same collection name you used in Firebase
   collectionName: 'test',
+  // Select button used in certain type of questions.
   selectedButtonColor: 'forestgreen',
+  // Questions and some infromation about them.
+  // Asked in this order.
+  // Check model config for to understand the question structure: https://github.com/RealLankinen/showcase-template/blob/master/src/utils/Config.js
   questions: [
     {
       type: questionTypes[0],
