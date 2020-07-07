@@ -42,3 +42,6 @@ Choose **Hosting: Configure and deploy Firebase Hosting sites**, **Create a new 
 ```
 firebase deploy
 ```
+
+
+From [https://github.com/RealLankinen/showcase-template](https://github.com/RealLankinen/showcase-template)
