@@ -1,41 +1,38 @@
-import React, { useEffect } from 'react';
-import { Container, Col, Row } from 'react-bootstrap';
-import ReactGA from 'react-ga';
-import { txts, showVideoBackground } from './utils/Config';
-import Onboarding from './components/Onboarding';
+import React, { useEffect } from "react";
+import { Container, Col, Row } from "react-bootstrap";
+import ReactGA from "react-ga";
+import { txts, showVideoBackground } from "./utils/Config";
+import Onboarding from "./components/Onboarding";
 
-const video = require('./assets/video.mp4');
-const image = require('./assets/image.jpg');
+// const video = require("./assets/video.mp4");
+const image = require("./assets/image.jpg");
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize('UA-160432575-1');
+    ReactGA.initialize("");
     ReactGA.pageview(window.location.pathname);
   }, []);
 
   return (
     <Container fluid>
       <Row>
-        {showVideoBackground ? (
-          <video
-            style={styles.video}
-            autoPlay
-            loop
-            muted
-            preload="auto"
-            src={video}
-          />
-        ) : (
-          <img alt="background" style={styles.video} src={image} />
-        )}
-
+        {/*
+        <video style={styles.video}
+          autoPlay
+          loop
+          muted
+          preload="auto"
+          src={video}
+        />
+        */}
+        <img alt="background" style={styles.video} src={image} />
         <p style={styles.title}>
-          <span style={{ color: 'white' }}>{txts.title}</span>
+          <span style={{ color: "white" }}>{txts.title}</span>
         </p>
       </Row>
       <Row style={styles.onboardingSection}>
         <Col xs={3} />
-        <Col xs={6} style={{ textAlign: 'center' }}>
+        <Col xs={6} style={{ textAlign: "center" }}>
           <Onboarding />
         </Col>
         <Col xs={3} />
@@ -78,49 +75,49 @@ function App() {
 
 const styles = {
   video: {
-    objectFit: 'cover',
-    filter: 'brightness(80%)',
-    width: '100%',
+    objectFit: "cover",
+    filter: "brightness(80%)",
+    width: "100%",
     maxHeight: 800,
   },
   title: {
-    textAlign: 'center',
-    fontSize: '4vw',
+    textAlign: "center",
+    fontSize: "4vw",
     fontWeight: 900,
-    position: 'absolute',
+    position: "absolute",
     top: 250,
     left: 0,
-    width: '100%',
+    width: "100%",
   },
   onboardingSection: {
     minHeight: 200,
-    alignItems: 'center',
-    backgroundColor: 'tomato',
+    alignItems: "center",
+    backgroundColor: "tomato",
   },
   threeEmojisSection: {
     height: 500,
-    alignItems: 'center',
+    alignItems: "center",
   },
   centerDiv: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   stepsText: {
     width: 250,
-    fontSize: '150%',
-    textAlign: 'center',
+    fontSize: "150%",
+    textAlign: "center",
   },
   mobileStepsText: {
     width: 250,
-    fontSize: '140%',
-    textAlign: 'center',
+    fontSize: "140%",
+    textAlign: "center",
   },
   subheaderText: {
-    color: 'black',
-    fontSize: '180%',
+    color: "black",
+    fontSize: "180%",
     padding: 20,
-    borderBottom: '2px solid #FF8B7B',
+    borderBottom: "2px solid #FF8B7B",
   },
 };
 

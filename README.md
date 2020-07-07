@@ -1,5 +1,7 @@
 # Showcacse Template
 
+![screenshot of the website](./screenshot.png)
+
 ## Getting Started
 
 ```
@@ -8,7 +10,7 @@ npm install
 mkdir showcase-template/src/assets
 ```
 
-Add a video with a name `video.mp4` to this new asset directory. This video is used in the website. If you want to use an image instead of a video it's possible by adding `image.jpg` to the same directory and then changing `showVideoBackground` to false in config.
+Add a video with a name `video.mp4` to this new asset directory. This video is used in the website. If you want to use an image instead of a video it's possible by adding `image.jpg` to the same directory. By default video is commented in `App.js` but you can uncomment it and comment image to use video.
 
 When you want to customize the code to your own purpose almost all of the modifications should be done in Config.js file. The idea is that this way developer should almost never touch the code and even a person without any coding skills should be available to do it. The only expection is that you probably want to add title and icon to the website which requires modifying things in `public` directory.
 
